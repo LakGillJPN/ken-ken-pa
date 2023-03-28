@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "npm install && cd ken-ken-pa && npm run build",
+    "build" : "npm install && cd ken-ken-pa && npm install && npm run build",
     "start" : "cd ken-ken-pa && npm run start"
   },
   "repository": {
