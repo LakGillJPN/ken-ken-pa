@@ -1,3 +1,7 @@
+.side-menu {
+    float: right;
+}
+
 .map-prefecture {
     fill: #d3d3d3;
     stroke: #959595;
