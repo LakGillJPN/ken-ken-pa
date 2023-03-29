@@ -1,10 +1,11 @@
 import './App.css';
-import Login from './components/Login'
+import Map from './components/Map';
 
 function App() {
   return (
     <div className="App">
       Ken-Ken-PA!
+      <Map></Map>
     </div>
   );
 }
