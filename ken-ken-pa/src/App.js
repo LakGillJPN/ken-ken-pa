@@ -30,7 +30,7 @@ export default function App() {
       <h1>{UIText.appName[currentLocale]}</h1>
 
       {currentView === "Memories" ? (
-        <Memories></Memories>
+        <Memories currentLocale={currentLocale}></Memories>
       ) : (
         <div>
           <Map 

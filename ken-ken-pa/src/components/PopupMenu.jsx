@@ -1,5 +1,5 @@
 import { React, useRef } from "react";
-import UIText from "../data/locales.json"
+import UIText from "../data/locales.json";
 
 export default function PopupMenu(props) {
     const {onClick, currentLocale} = props;
