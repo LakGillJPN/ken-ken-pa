@@ -137,21 +137,21 @@
             "Your photos and memos"
         ],
         "ja": [
-            "マイメモリ",
+            "マイ思い出",
             "あなたの写真とメモ"
         ]
     },
     "add-memory": {
         "en": "Add a New Memory",
-        "ja": "新しいメモリを作成する"
+        "ja": "新しい思い出を作成する"
     },
     "add-memory-of": {
         "en": "Add a Memory of ",
-        "ja": "のメモリを追加する"
+        "ja": "の思い出を追加する"
     },
     "see-memories-of": {
-        "en": "See Memories of ",
-        "ja": "のメモリを見る"
+        "en": "See All Memories of ",
+        "ja": "の全ての思い出を見る"
     },
     "remove-visit": {
         "en": "Remove Visit",
