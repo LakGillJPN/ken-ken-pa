@@ -1,0 +1,160 @@
+{
+    "appName": {
+        "en": "Ken-Ken-Pa",
+        "ja": "県県ぱ"
+    },
+    "prefectures": {
+        "en": [
+            "Tokyo",
+            "Hokkaido",
+            "Osaka",
+            "Kyoto",
+            "Shizuoka",
+            "Kanagawa",
+            "Nagano",
+            "Okinawa",
+            "Aichi",
+            "Akita",
+            "Aomori",
+            "Chiba",
+            "Ehime",
+            "Fukui",
+            "Fukuoka",
+            "Fukushima",
+            "Gifu",
+            "Gunma",
+            "Hiroshima",
+            "Ibaraki",
+            "Ishikawa",
+            "Iwate",
+            "Kagawa",
+            "Kagoshima",
+            "Kochi",
+            "Kumamoto",
+            "Kyoto",
+            "Mie",
+            "Miyagi",
+            "Miyazaki",
+            "Nagano",
+            "Nagasaki",
+            "Nara",
+            "Niigata",
+            "Oita",
+            "Okayama",
+            "Okinawa",
+            "Osaka",
+            "Saga",
+            "Saitama",
+            "Shiga",
+            "Shimane",
+            "Shizuoka",
+            "Tochigi",
+            "Tokushima",
+            "Tottori",
+            "Yamagata"
+        ],
+        "ja": [
+            "東京都",
+            "北海道",
+            "大阪府",
+            "京都府",
+            "静岡県",
+            "神奈川県",
+            "長野県",
+            "沖縄県",
+            "愛知県",
+            "秋田県",
+            "青森県",
+            "千葉県",
+            "愛媛県",
+            "福井県",
+            "福岡県",
+            "福島県",
+            "岐阜県",
+            "群馬県",
+            "広島県",
+            "茨城県",
+            "石川県",
+            "岩手県",
+            "香川県",
+            "鹿児島県",
+            "高知県",
+            "熊本県",
+            "京都府",
+            "三重県",
+            "宮城県",
+            "宮崎県",
+            "長野県",
+            "長崎県",
+            "奈良県",
+            "新潟県",
+            "大分県",
+            "岡山県",
+            "沖縄県",
+            "大阪府",
+            "佐賀県",
+            "埼玉県",
+            "滋賀県",
+            "島根県",
+            "静岡県",
+            "栃木県",
+            "徳島県",
+            "鳥取県",
+            "山形県"
+        ]
+    },
+    "username": {
+        "en": "Username",
+        "ja": "ユーザーネーム"
+    },
+    "password": {
+        "en": "Password",
+        "ja": "パスワード"
+    },
+    "login": {
+        "en": "Log In",
+        "ja": "ログイン"
+    },
+    "login-submit": {
+        "en": "Log In",
+        "ja": "ログインする"
+    },
+    "signup-prompt": {
+        "en": "Not a member? Sign up here!",
+        "ja": "アカウントをお持ちしていない方はこちらから登録してくだざい。"
+    },
+    "signup": {
+        "en": "Sign Up",
+        "ja": "アカウント登録"
+    },
+    "signup-submit": {
+        "en": "Submit",
+        "ja": "登録する"
+    },
+    "my-memories": {
+        "en": [
+            "My Memories",
+            "Your photos and memos"
+        ],
+        "ja": [
+            "マイメモリ",
+            "あなたの写真とメモ"
+        ]
+    },
+    "add-memory": {
+        "en": "Add a New Memory",
+        "ja": "新しいメモリを作成する"
+    },
+    "add-memory-of": {
+        "en": "Add a Memory of ",
+        "ja": "のメモリを追加する"
+    },
+    "see-memories-of": {
+        "en": "See Memories of ",
+        "ja": "のメモリを見る"
+    },
+    "remove-visit": {
+        "en": "Remove Visit",
+        "ja": "来県した状況を解く"
+    }
+}
