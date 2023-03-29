@@ -2,9 +2,9 @@ import React from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import prefectures from "../data/japan_prefectural_borders.json";
 
-export default function Map() {
+export default function Map(props) {
+    const {handlePopupMenu} = props;
     return (
-        <div>
             <ComposableMap
                 className="map-svg"
                 projection="geoMercator"
@@ -19,6 +19,7 @@ export default function Map() {
                         ({ geographies }) =>
                             geographies.map((geo) => (
                                 <Geography
+                                    onClick={handlePopupMenu}
                                     title={`${geo.properties.name_ja} - ${geo.properties.name_en}`}
                                     className="map-prefecture"
                                     key={geo.rsmKey}
@@ -27,6 +28,5 @@ export default function Map() {
                     }
                 </Geographies>
             </ComposableMap>
-        </div>
     );
 };
