@@ -121,11 +121,11 @@
     },
     "signup-prompt": {
         "en": "Not a member? Sign up here!",
-        "ja": "アカウントをお持ちしていない方はこちらから登録してくだざい。"
+        "ja": "アカウントをお持ちでない方はこちらから新規会員登録をお願いします。"
     },
     "signup": {
         "en": "Sign Up",
-        "ja": "アカウント登録"
+        "ja": "会員登録"
     },
     "signup-submit": {
         "en": "Submit",
