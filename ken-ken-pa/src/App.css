@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .map-prefecture {
     fill: #d3d3d3;
     stroke: #959595;
@@ -10,3 +11,8 @@
     stroke-width: 1px;
     outline: none;
 }
+=======
+.side-menu {
+    float: right;
+}
+>>>>>>> 8f75d33 (feat: create App.js and three components: Map, Memories and PopupMenu)
