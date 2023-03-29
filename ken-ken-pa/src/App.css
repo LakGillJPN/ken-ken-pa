@@ -12,3 +12,6 @@
     stroke-width: 1px;
     outline: none;
 }
+.side-menu {
+    float: right;
+}
