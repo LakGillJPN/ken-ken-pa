@@ -3,6 +3,7 @@ import './App.css';
 import Map from "./components/Map";
 import Memories from "./components/Memories";
 import PopupMenu from "./components/PopupMenu";
+import UIText from "./data/locales.json";
 
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
   const [isShown, setPopupMenu] = useState(false);
   //currentView becomes "Memories", if see memories button in the pop-up menu is clicked
   const [currentView, setCurrentView] = useState("");
+  const [currentLocale, setCurrentLocale] = useState("en");
 
   const handlePopupMenu = (event) => {
     //if users click a prefecture, the menu is poped up
@@ -25,17 +27,17 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Ken-Ken-PA!</h1>
+      <h1>{UIText.appName[currentLocale]}</h1>
 
       {currentView === "Memories" ? (
-        <Memories></Memories>
+        <Memories currentLocale={currentLocale}></Memories>
       ) : (
         <div>
           <Map 
           handlePopupMenu={handlePopupMenu}></Map>
 
           {isShown === true ? (
-            <PopupMenu onClick={handleSeeMemoriesClicked}></PopupMenu>
+            <PopupMenu currentLocale={currentLocale} onClick={handleSeeMemoriesClicked}></PopupMenu>
           ) : (
             <div></div>
           )}
@@ -43,8 +45,8 @@ export default function App() {
       )}
 
       <div className="side-menu">
-        <button>日本語</button>
-        <button>English</button>
+        <button onClick={() => setCurrentLocale("ja")}>日本語</button>
+        <button onClick={() => setCurrentLocale("en")}>English</button>
       </div>
     </div>
   );
