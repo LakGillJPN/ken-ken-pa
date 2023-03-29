@@ -3,11 +3,10 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  return knex.schema.createTable('users', function(table) {
+  return knex.schema.createTable('prefecture', function(table) {
     table.increments('id')
     .primary();
-    table.varchar('e-mail_address')
-    .unique()
+    table.varchar('name')
     .notNullable();
   })
 };
@@ -17,5 +16,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  knex.schema.dropTable("user");
+  knex.schema.dropTable('prefectures');
 };

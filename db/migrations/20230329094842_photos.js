@@ -8,12 +8,12 @@ exports.up = function(knex) {
     .primary();
     table.integer('user_id')
     .references('id')
-    .inTable('user');
+    .inTable('users');
     table.integer('prefecture_id')
-    .references('prefecture_id')
-    .inTable('user_has_prefecture')
-    table.string('IMG_64') 
-    table.varchar('description')
+    .references('id')
+    .inTable('prefectures')
+    table.string('photo_key');
+    table.varchar('description');
   })
 };
 
@@ -22,5 +22,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  
+  knex.schema.dropTable('photos');
 };
