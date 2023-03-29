@@ -6,8 +6,8 @@ exports.up = function(knex) {
   return knex.schema.createTable('user', function(table) {
     table.increments('id')
     .primary();
-    table.varchar('username').
-    unique()
+    table.varchar('username')
+    .unique()
     .notNullable();
   })
 };
