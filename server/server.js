@@ -1,6 +1,5 @@
 const express = require('express')
 const path = require('path');
-const PORT = process.env.PORT || 4000;
 
 function setupServer() {
   const app = express();
@@ -12,12 +11,9 @@ function setupServer() {
     res.send('world');
   })
 
-  app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-  });
-
   return app;
 };
 
 
+module.exports = setupServer;
 module.exports = setupServer;
