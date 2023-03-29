@@ -12,12 +12,19 @@ export default function Map() {
                     center: [135, 35],
                     scale: 1200
                 }}>
-                <Geographies className="map-nation" geography={prefectures}>
-                {({ geographies }) =>
-                    geographies.map((geo) => (
-                    <Geography className="map-prefecture" key={geo.rsmKey} geography={geo} />
-                    ))
-                }
+                <Geographies
+                    className="map-nation"
+                    geography={prefectures}>
+                    {
+                        ({ geographies }) =>
+                            geographies.map((geo) => (
+                                <Geography
+                                    title={`${geo.properties.name_ja} - ${geo.properties.name_en}`}
+                                    className="map-prefecture"
+                                    key={geo.rsmKey}
+                                    geography={geo} />
+                            ))
+                    }
                 </Geographies>
             </ComposableMap>
         </div>
