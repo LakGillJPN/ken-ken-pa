@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  return knex.schema.createTable('prefecture', function(table) {
+  return knex.schema.createTable('prefectures', function(table) {
     table.increments('id')
     .primary();
     table.varchar('name')
