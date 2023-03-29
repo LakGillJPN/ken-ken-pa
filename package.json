@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install && cd ken-ken-pa && npm install && npm run build",
     "start": "cd ken-ken-pa && npm run start",
+    "dev": "nodemon server/index.js",
     "make:migration": "knex migrate:make",
     "migrate": "knex migrate:latest",
     "make:seed": "knex seed:make",
@@ -26,8 +27,10 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "knex": "^2.4.2",
+    "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "pg": "^8.10.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-simple-maps": "^3.0.0"
   }
 }
