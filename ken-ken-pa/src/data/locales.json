@@ -1,7 +1,7 @@
 {
     "appName": {
-        "en": "Ken-Ken-Pa",
-        "ja": "県-県-ぱ"
+        "en": "Ken-Ken-PA!",
+        "ja": "県-県-ぱ!"
     },
     "prefectures": {
         "en": [
@@ -150,7 +150,7 @@
         "ja": "の思い出を追加する"
     },
     "see-memories-of": {
-        "en": "See All Memories of ",
+        "en": "See Memories of ",
         "ja": "の全ての思い出を見る"
     },
     "remove-visit": {
