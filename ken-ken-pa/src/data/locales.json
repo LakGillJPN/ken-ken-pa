@@ -1,7 +1,7 @@
 {
     "appName": {
         "en": "Ken-Ken-Pa",
-        "ja": "県県ぱ"
+        "ja": "県-県-ぱ"
     },
     "prefectures": {
         "en": [
@@ -137,7 +137,7 @@
             "Your photos and memos"
         ],
         "ja": [
-            "マイ思い出",
+            "マイメモリーズ",
             "あなたの写真とメモ"
         ]
     },
@@ -155,6 +155,6 @@
     },
     "remove-visit": {
         "en": "Remove Visit",
-        "ja": "来県した状況を解く"
+        "ja": "思い出の都道府県を削除"
     }
 }
