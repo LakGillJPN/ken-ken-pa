@@ -1,6 +1,8 @@
 .side-menu {
     float: right;
-}.map-prefecture {
+}
+
+.map-prefecture {
     fill: #d3d3d3;
     stroke: #959595;
     stroke-width: 1px;
@@ -11,7 +13,4 @@
     stroke: rgb(0, 47, 101);
     stroke-width: 1px;
     outline: none;
-}
-.side-menu {
-    float: right;
 }
