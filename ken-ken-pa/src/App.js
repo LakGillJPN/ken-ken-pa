@@ -32,6 +32,12 @@ export default function App() {
     setCurrentLocale("en");
   }
 
+  const goToHome = (event) => {
+    event.preventDefault();
+    setCurrentView("")
+  }
+
+
   return (
     <div className="App">
       <h1>{UIText.appName[currentLocale]}</h1>
@@ -53,6 +59,8 @@ export default function App() {
       <Navbar
       changeLangToJa={changeLangToJa}
       changeLangToEn={changeLangToEn}
+      goToHome={goToHome}
+      currentView={currentView}
       >
       </Navbar>
     </div>
