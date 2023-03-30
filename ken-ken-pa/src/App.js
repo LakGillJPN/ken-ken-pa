@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
+import AddNewMemory from "./components/AddNewMemory";
 import Map from "./components/Map";
 import Memories from "./components/Memories";
 import PopupMenu from "./components/PopupMenu";
@@ -43,18 +44,21 @@ export default function App() {
           currentView === "PrefectureMemories" ? (
             <PrefectureMemories currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></PrefectureMemories>
           ) : (
-          <div>
-            <Map 
-            handlePopupMenu={handlePopupMenu}
-            setSelectedPrefecture={setSelectedPrefecture}></Map>
-
-            {isShown === true ? (
-              <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleSeePrefectureMemoriesClicked}></PopupMenu>
+            currentView === "AddNewMemory" ? (
+              <AddNewMemory currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></AddNewMemory>
             ) : (
-              <div></div>
-            )}
-          </div>
-        ))
+              <div>
+                <Map 
+                handlePopupMenu={handlePopupMenu}
+                setSelectedPrefecture={setSelectedPrefecture}></Map>
+
+                {isShown === true ? (
+                  <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleSeePrefectureMemoriesClicked}></PopupMenu>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+        )))
       }
 
       <div className="side-menu">

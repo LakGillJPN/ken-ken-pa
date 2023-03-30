@@ -3,12 +3,10 @@ import UIText from "../data/locales.json";
 
 export default function PopupMenu(props) {
     const {onClick, currentLocale, selectedPrefecture} = props;
-    const inputRef = useRef();
 
     return (
         <div className="popup-menu-container">
-            <input ref={inputRef} type="file" style={{display: "none"}}/>
-            <button className="button" onClick={() => { inputRef.current.click() }} >
+            <button className="button" onClick={onClick} >
                 {
                     currentLocale === "en"
                         ? UIText["add-memory-of"][currentLocale] + UIText.prefectures[selectedPrefecture][currentLocale]
