@@ -61,6 +61,7 @@ export default function App() {
       changeLangToEn={changeLangToEn}
       goToHome={goToHome}
       currentView={currentView}
+      handleSeeMemoriesClicked={handleSeeMemoriesClicked}
       >
       </Navbar>
     </div>

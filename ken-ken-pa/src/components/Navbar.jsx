@@ -1,7 +1,7 @@
 import { React } from "react";
 
 export default function Navbar(props) {
-    const { changeLangToJa, changeLangToEn, goToHome, currentView } = props;
+    const { changeLangToJa, changeLangToEn, goToHome, currentView, handleSeeMemoriesClicked } = props;
 
     return (
     <div className="navbar">
@@ -13,7 +13,7 @@ export default function Navbar(props) {
             onClick={goToHome}>Home
             </h1>
         ) : (
-            <button>My Memories</button>
+            <button onClick={handleSeeMemoriesClicked}>My Memories</button>
         )}
 
         <div>
