@@ -8,6 +8,11 @@ export default function Login() {
     event.preventDefault();
     console.log(event.target[0].value); // email
     console.log(event.target[1].value); // password
+    // ignore white space? then pop up can tell invaild inputs to user
+    
+    // (async) to send email and password to express endpoint /login
+
+    
   };
 
   return (
