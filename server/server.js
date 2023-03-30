@@ -11,8 +11,9 @@ function setupServer() {
   app.use(express.static(path.resolve(__dirname, '../ken-ken-pa/build')));
   app.use(express.json());
 
+  // endopint /login
   app.use(loginRoutes);
-  
+
   app.get('/hello', (req, res) => {
     res.send('world');
   })
