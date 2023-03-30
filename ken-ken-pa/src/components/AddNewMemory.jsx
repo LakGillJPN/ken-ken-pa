@@ -6,7 +6,7 @@ export default function AddNewMemory(props) {
     
     return (
         <div>
-            <p>{UIText["add-memory"][currentLocale]}</p>
+            <h1>{UIText["add-memory"][currentLocale]}</h1>
             <div>
                 <p>{UIText["select-prefecture"][currentLocale]}</p>
                 <div>prefecture dropdown for {selectedPrefecture}</div>
@@ -14,14 +14,20 @@ export default function AddNewMemory(props) {
             <div>
                 <p>{UIText["select-photo"][currentLocale]}</p>
                 <div>file upload/photo preview here</div>
-                <p>{UIText["remove-photo"][currentLocale]}</p>
+                <input ref={inputRef} type="file" style={{display: "none"}}/>
+                <button className="button" onClick={() => { inputRef.current.click() }} >
+                    {UIText["choose-photo"][currentLocale]}
+                </button>
+                <button className="button">
+                    × {UIText["remove-photo"][currentLocale]}
+                </button>
             </div>
             <div>
                 <p>{UIText["explain-memory"][currentLocale]}</p>
                 <div>text box here</div>
             </div>
             <div>
-                <p>{UIText["submit-memory"][currentLocale]}</p>
+                <button>{UIText["submit-memory"][currentLocale]}</button>
             </div>
         </div>
     );

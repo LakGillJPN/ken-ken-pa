@@ -265,6 +265,10 @@
         "en": "Select Photo:",
         "ja": "写真を選択："
     },
+    "choose-photo": {
+        "en": "Choose Photo",
+        "ja": "写真を選択"
+    },
     "explain-memory": {
         "en": "Tell us about your memory:",
         "ja": "思い出についてご入力ください："
