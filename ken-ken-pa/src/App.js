@@ -4,25 +4,32 @@ import Map from "./components/Map";
 import Memories from "./components/Memories";
 import PopupMenu from "./components/PopupMenu";
 import UIText from "./data/locales.json";
+import Navbar from "./components/Navbar";
 
 
 export default function App() {
-  //The menu is poped up === isShown is true
   const [isShown, setPopupMenu] = useState(false);
-  //currentView becomes "Memories", if see memories button in the pop-up menu is clicked
   const [currentView, setCurrentView] = useState("");
   const [currentLocale, setCurrentLocale] = useState("en");
 
   const handlePopupMenu = (event) => {
-    //if users click a prefecture, the menu is poped up
     event.preventDefault();
     setPopupMenu(true);
   }
 
   const handleSeeMemoriesClicked = (event) => {
-    //if see memories button in the menu clicked, currentView becomes "Memories"
     event.preventDefault();
     setCurrentView("Memories");
+  }
+
+  const changeLangToJa = (event) => {
+    event.preventDefault();
+    setCurrentLocale("ja");
+  }
+
+  const changeLangToEn = (event) => {
+    event.preventDefault();
+    setCurrentLocale("en");
   }
 
   return (
@@ -43,11 +50,11 @@ export default function App() {
           )}
         </div>
       )}
-
-      <div className="side-menu">
-        <button onClick={() => setCurrentLocale("ja")}>日本語</button>
-        <button onClick={() => setCurrentLocale("en")}>English</button>
-      </div>
+      <Navbar
+      changeLangToJa={changeLangToJa}
+      changeLangToEn={changeLangToEn}
+      >
+      </Navbar>
     </div>
   );
 }
