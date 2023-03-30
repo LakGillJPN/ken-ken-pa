@@ -31,7 +31,8 @@ export default function App() {
         <Memories></Memories>
       ) : (
         <div>
-          <Map onClick={handlePopupMenu}></Map>
+          <Map 
+          handlePopupMenu={handlePopupMenu}></Map>
 
           {isShown === true ? (
             <PopupMenu onClick={handleSeeMemoriesClicked}></PopupMenu>
