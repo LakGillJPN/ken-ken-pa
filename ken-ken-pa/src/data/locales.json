@@ -256,5 +256,25 @@
     "remove-visit": {
         "en": "Remove Visit",
         "ja": "思い出の都道府県を削除"
+    },
+    "select-prefecture": {
+        "en": "Select Prefecture:",
+        "ja": "思い出の都道府県を選択："
+    },
+    "select-photo": {
+        "en": "Select Photo:",
+        "ja": "写真を選択："
+    },
+    "explain-memory": {
+        "en": "Tell us about your memory:",
+        "ja": "思い出についてご入力ください："
+    },
+    "remove-photo": {
+        "en": "Remove Photo",
+        "ja": "写真を削除"
+    },
+    "submit-memory": {
+        "en": "Submit",
+        "ja": "思い出を追加"
     }
 }
