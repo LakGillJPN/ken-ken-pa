@@ -16,7 +16,7 @@ export default function Login(props) {
              <input type="email" name="user_email" placeholder='Enter your Email' />
             <p>Password</p>
             <input type="password" name="user_password" placeholder='Enter password' />
-         </div>
+           </div>
         <p id="sign-up">Not a member? Sign up here!</p>
       <SubmitBtn/>
     </div>

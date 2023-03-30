@@ -6,15 +6,16 @@ export default function Map() {
     return (
         <div>
             <ComposableMap
+                className="map-svg"
                 projection="geoMercator"
                 projectionConfig={{
                     center: [135, 35],
-                    scale: 1000
+                    scale: 1200
                 }}>
-                <Geographies geography={prefectures}>
+                <Geographies className="map-nation" geography={prefectures}>
                 {({ geographies }) =>
                     geographies.map((geo) => (
-                    <Geography key={geo.rsmKey} geography={geo} />
+                    <Geography className="map-prefecture" key={geo.rsmKey} geography={geo} />
                     ))
                 }
                 </Geographies>

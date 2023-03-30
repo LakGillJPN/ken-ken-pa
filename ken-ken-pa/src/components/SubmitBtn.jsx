@@ -5,5 +5,5 @@ import Reac , {useEffect } from 'react';
 export default function Submitbtn(props) { 
     // user can send data to firebase
     // there is no user 
-    return  <button className='btn'>Submit</button>
+    return  <button className='btn' type='submit'>Submit</button>
 }
