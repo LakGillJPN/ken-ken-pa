@@ -1,9 +1,7 @@
-import './SubmitBtn.css';
-import Reac , {useEffect } from 'react';
+import React from 'react';
+import "./SubmitBtn.css"
 
 // submit btn component
-export default function Submitbtn(props) { 
-    // user can send data to firebase
-    // there is no user 
-    return  <button className='btn' type='submit'>Submit</button>
+export default function SubmitBtn(props) {
+  return (<button className='btn' type='submit' value="Submit">Submit</button>);
 }
