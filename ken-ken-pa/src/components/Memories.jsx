@@ -1,9 +1,8 @@
-import { React, useRef } from "react";
+import { React } from "react";
 import UIText from "../data/locales.json";
 
 export default function Memories(props) {
-    const { currentLocale } = props;
-    const inputRef = useRef();
+    const { onClick, currentLocale } = props;
 
    return(
     <div className="memories-container">
@@ -12,8 +11,7 @@ export default function Memories(props) {
         <p>Photo zone</p>
         
         <div className="side-menu">
-            <input ref={inputRef} type="file" style={{display: "none"}}/>
-            <button className="button" onClick={() => { inputRef.current.click(); }} >
+            <button className="button" value="AddNewMemory" onClick={onClick} >
                 { UIText["add-memory"][currentLocale] }
             </button>
         </div>

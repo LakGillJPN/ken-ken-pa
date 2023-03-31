@@ -2,13 +2,13 @@ import { React } from "react";
 import UIText from "../data/locales.json";
 
 export default function Navbar(props) {
-    const { currentLocale, changeLangToJa, changeLangToEn, goToHome, currentView, handleSeeMemoriesClicked } = props;
+    const { currentLocale, changeLangToJa, changeLangToEn, goToHome, currentView, handleViewChange } = props;
 
     return (
     <div className="navbar">
         <h2 className="logout-button">Logout</h2>
 
-        { currentView === "Memories" || currentView === "PrefectureMemories" ? (
+        { currentView === "Memories" || currentView === "PrefectureMemories" || currentView === "AddNewMemory" ? (
             <h1 
             className="home-button"
             onClick={goToHome}>Home
@@ -16,12 +16,13 @@ export default function Navbar(props) {
         ) : ("")}
 
         { currentView === "" || currentView === "PrefectureMemories" ? (
-            <h1 
+            <button 
             className="my-memories-button"
-            onClick={handleSeeMemoriesClicked}
+            value="Memories"
+            onClick={handleViewChange}
             >
             { UIText["my-memories"][0][currentLocale] }
-            </h1>
+            </button>
         ) : ("")}
 
         <div className="language-button">

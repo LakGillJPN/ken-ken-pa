@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
+import AddNewMemory from "./components/AddNewMemory";
 import Map from "./components/Map";
 import Memories from "./components/Memories";
 import PopupMenu from "./components/PopupMenu";
@@ -19,9 +20,13 @@ export default function App() {
     setPopupMenu(true);
   }
 
-  const handleSeeMemoriesClicked = (event) => {
+  const handleViewChange = (event) => {
+    // When user clicks button, currentView changes to value of button
     event.preventDefault();
-    setCurrentView("Memories");
+    if (currentView === "Memories") {
+      setSelectedPrefecture("");
+    }
+    setCurrentView(event.target.value);
   }
 
   const changeLangToJa = (event) => {
@@ -40,43 +45,40 @@ export default function App() {
     setPopupMenu(false);
   }
 
-
-  const handleSeePrefectureMemoriesClicked = (event) => {
-    event.preventDefault();
-    setCurrentView("PrefectureMemories");
-  }
-
   return (
     <div className="App">
       <h1>{UIText.appName[currentLocale]}</h1>
       {
         currentView === "Memories" ? (
-          <Memories currentLocale={currentLocale}></Memories>
+          <Memories currentLocale={currentLocale} onClick={handleViewChange}></Memories>
         ) : (
           currentView === "PrefectureMemories" ? (
-            <PrefectureMemories currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></PrefectureMemories>
+            <PrefectureMemories currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleViewChange}></PrefectureMemories>
           ) : (
-            <Map 
-            handlePopupMenu={handlePopupMenu}
-            setSelectedPrefecture={setSelectedPrefecture}></Map>
-          )
-        )
-      }
-          <div>
-            {isShown === true && currentView === "" ? (
-              <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleSeePrefectureMemoriesClicked}></PopupMenu>
+            currentView === "AddNewMemory" ? (
+              <AddNewMemory currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></AddNewMemory>
             ) : (
-              <div></div>
-            )}
-          </div>
-      
+              <div>
+                <Map 
+                handlePopupMenu={handlePopupMenu}
+                setSelectedPrefecture={setSelectedPrefecture}></Map>
+
+                {isShown === true ? (
+                  <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleViewChange} ></PopupMenu>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+        )))
+      }
+
           <Navbar
           currentLocale={currentLocale}
           changeLangToJa={changeLangToJa}
           changeLangToEn={changeLangToEn}
           goToHome={goToHome}
           currentView={currentView}
-          handleSeeMemoriesClicked={handleSeeMemoriesClicked}
+          handleViewChange={handleViewChange}
           >
           </Navbar>
     </div>
