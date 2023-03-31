@@ -4,6 +4,7 @@ import Map from "./components/Map";
 import Memories from "./components/Memories";
 import PopupMenu from "./components/PopupMenu";
 import UIText from "./data/locales.json";
+import Login from "./components/Login"; // it shoud be deleted
 
 
 export default function App() {
@@ -28,6 +29,9 @@ export default function App() {
   return (
     <div className="App">
       <h1>{UIText.appName[currentLocale]}</h1>
+
+      {/* it going to be gone */}
+      <Login />
 
       {currentView === "Memories" ? (
         <Memories currentLocale={currentLocale}></Memories>

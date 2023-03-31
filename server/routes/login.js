@@ -1,18 +1,15 @@
 const express = require("express");
 const router = express.Router();
+import firebase from "firebase";
 
 
-/**
- * req.body {email: "something", password: "somethinw"} 
-  firebase authentication has the user login data
-  if there is no user => 
-  if there is user login data => 
- * 
- */
+router.post("/login", async(req, res) => {
+  console.log("request.body is", req.body);
+  // user email and password
+  const { email, password } = req.body;
 
-router.post("/login", (req,res) => {
-  console.log(req.body);
-  res.status(200);
+  
+  res.status(200).send(req.body);
 });
 
 // export 

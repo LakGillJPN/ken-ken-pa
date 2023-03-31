@@ -1,18 +1,28 @@
 import React from "react";
 import SubmitBtn from "./SubmitBtn";
+import axios from "axios";
 import "./Login.css";
 
 export default function Login() {
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(event.target[0].value); // email
-    console.log(event.target[1].value); // password
+
+    // inputs from form data
+    const userLoginInfo = {
+      email: event.target[0].value,
+      password: event.target[1].value
+     }
+
     // ignore white space? then pop up can tell invaild inputs to user
+    if (userLoginInfo.email === "" || userLoginInfo.password === "") {
+      // pop up?? or message??
+      return; // 
+    }
     
     // (async) to send email and password to express endpoint /login
-
-
+    const isEnableToLogin = await axios.post("/login", userLoginInfo);
+    console.log(isEnableToLogin.status);
     // faild or sucess
   };
 
