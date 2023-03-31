@@ -22,7 +22,7 @@ export default function App() {
     setPopupMenu(true);
   }
 
-  const changeViewOnButtonClick = (event) => {
+  const handleViewChange = (event) => {
     // When user clicks button, currentView changes to value of button
     event.preventDefault();
     setCurrentView(event.target.value);
@@ -48,7 +48,7 @@ export default function App() {
                 setSelectedPrefecture={setSelectedPrefecture}></Map>
 
                 {isShown === true ? (
-                  <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={changeViewOnButtonClick} ></PopupMenu>
+                  <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleViewChange} ></PopupMenu>
                 ) : (
                   <div></div>
                 )}
