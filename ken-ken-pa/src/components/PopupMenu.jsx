@@ -1,14 +1,12 @@
-import { React, useRef } from "react";
+import { React } from "react";
 import UIText from "../data/locales.json";
 
 export default function PopupMenu(props) {
     const {onClick, currentLocale, selectedPrefecture} = props;
-    const inputRef = useRef();
 
     return (
         <div className="popup-menu-container">
-            <input ref={inputRef} type="file" style={{display: "none"}}/>
-            <button className="button" onClick={() => { inputRef.current.click() }} >
+            <button className="button" onClick={onClick} value="AddNewMemory">
                 {
                     currentLocale === "en"
                         ? UIText["add-memory-of"][currentLocale] + UIText.prefectures[selectedPrefecture][currentLocale]
@@ -16,7 +14,7 @@ export default function PopupMenu(props) {
                 }
             </button>
             
-            <button className="button" onClick={onClick}>
+            <button className="button" onClick={onClick} value="PrefectureMemories">
                 {
                     currentLocale === "en"
                         ? UIText["see-memories-of"][currentLocale] + UIText.prefectures[selectedPrefecture][currentLocale]

@@ -1,9 +1,8 @@
-import { React, useRef } from "react";
+import { React } from "react";
 import UIText from "../data/locales.json";
 
 export default function PrefectureMemories(props) {
-    const { currentLocale, selectedPrefecture } = props;
-    const inputRef = useRef();
+    const { onClick, currentLocale, selectedPrefecture } = props;
 
    return(
     <div className="memories-container">
@@ -12,8 +11,7 @@ export default function PrefectureMemories(props) {
         <p>Photo zone</p>
         
         <div className="side-menu">
-            <input ref={inputRef} type="file" style={{display: "none"}}/>
-            <button className="button" onClick={() => { inputRef.current.click(); }} >
+            <button className="button" value="AddNewMemory" onClick={onClick} >
                 {
                     currentLocale === "en"
                         ? UIText["add-memory-of"][currentLocale] + UIText.prefectures[selectedPrefecture][currentLocale]
