@@ -24,7 +24,6 @@ export default function App() {
     setCurrentView("Memories");
   }
 
-<<<<<<< HEAD
   const changeLangToJa = (event) => {
     event.preventDefault();
     setCurrentLocale("ja");
@@ -37,21 +36,19 @@ export default function App() {
 
   const goToHome = (event) => {
     event.preventDefault();
-    setCurrentView("")
+    setCurrentView("");
+    setPopupMenu(false);
   }
 
 
-=======
   const handleSeePrefectureMemoriesClicked = (event) => {
     event.preventDefault();
     setCurrentView("PrefectureMemories");
   }
 
->>>>>>> main
   return (
     <div className="App">
       <h1>{UIText.appName[currentLocale]}</h1>
-
       {
         currentView === "Memories" ? (
           <Memories currentLocale={currentLocale}></Memories>
@@ -59,39 +56,29 @@ export default function App() {
           currentView === "PrefectureMemories" ? (
             <PrefectureMemories currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></PrefectureMemories>
           ) : (
-<<<<<<< HEAD
-            <div></div>
-          )}
-        </div>
-      )}
-      <Navbar
-      changeLangToJa={changeLangToJa}
-      changeLangToEn={changeLangToEn}
-      goToHome={goToHome}
-      currentView={currentView}
-      handleSeeMemoriesClicked={handleSeeMemoriesClicked}
-      >
-      </Navbar>
-=======
-          <div>
             <Map 
             handlePopupMenu={handlePopupMenu}
             setSelectedPrefecture={setSelectedPrefecture}></Map>
-
-            {isShown === true ? (
+          )
+        )
+      }
+          <div>
+            {isShown === true && currentView === "" ? (
               <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleSeePrefectureMemoriesClicked}></PopupMenu>
             ) : (
               <div></div>
             )}
           </div>
-        ))
-      }
-
-      <div className="side-menu">
-        <button onClick={() => setCurrentLocale("ja")}>日本語</button>
-        <button onClick={() => setCurrentLocale("en")}>English</button>
-      </div>
->>>>>>> main
+      
+          <Navbar
+          currentLocale={currentLocale}
+          changeLangToJa={changeLangToJa}
+          changeLangToEn={changeLangToEn}
+          goToHome={goToHome}
+          currentView={currentView}
+          handleSeeMemoriesClicked={handleSeeMemoriesClicked}
+          >
+          </Navbar>
     </div>
   );
 }
