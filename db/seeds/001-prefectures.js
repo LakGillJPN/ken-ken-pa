@@ -37,7 +37,7 @@ exports.seed = async function(knex) {
     {id: 29, name: 'Nara'},
     {id: 30, name: 'Wakayama'},
     {id: 31, name: 'Tottori'},
-    {id: 32, name: 'Shimane"'},
+    {id: 32, name: 'Shimane'},
     {id: 33, name: 'Okayama'},
     {id: 34, name: 'Hiroshima'},
     {id: 35, name: 'Yamaguchi'},
