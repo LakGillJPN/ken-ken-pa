@@ -5,8 +5,7 @@ import "./Login.css";
 
 export default function Login() {
   // login Success or error
-  const [isloginFaild, setLogin] = useState(false);
-  
+  const [isloginUnsuccess, setLoginUnsuccess] = useState();
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -16,16 +15,21 @@ export default function Login() {
       password: event.target[1].value
      }
 
-    // ignore white space? then pop up can tell invaild inputs to user
-    if (userLoginInfo.email === "" || userLoginInfo.password === "") {
-      // pop up?? or message??
-      return; // 
+     // (async) to send email and password to express endpoint /login
+    const loginResult  = await tryLogin(userLoginInfo);
+
+    // when user login is unsuccessful
+    if (loginResult === false) {
+      setLoginUnsuccess(true);
+    // user login is successful
+    } else if (loginResult === true) { 
+      setLoginUnsuccess(false);
     }
-    
-    // (async) to send email and password to express endpoint /login
+  };
+
+  const tryLogin = async (userLoginInfo) => {
     const isEnableToLogin = await axios.post("/login", userLoginInfo);
-    console.log(isEnableToLogin.status);
-    // faild or sucess
+    return isEnableToLogin.data;
   };
 
   return (
@@ -48,6 +52,11 @@ export default function Login() {
             </label>
           </div>
           <p id="sign-up">Not a member? Sign up here!</p>
+
+          {isloginUnsuccess
+            ? <p id="err">Sorry Incorrect password or email address</p>
+            : <></>
+          }
          <SubmitBtn/>
     </form>
     </div>
