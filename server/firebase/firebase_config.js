@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -17,5 +16,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-module.exports = app;
+export async function loginWithEmailandPassword(email, password) {
+  try {
+    const user = await signInWithEmailAndPassword(auth, email, password);
+    console.log("Login Success");
+    return user;
+  } catch (err) { 
+    console.log("ERROR🔥", err);
+  }
+  
+}
