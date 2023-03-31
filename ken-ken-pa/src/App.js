@@ -25,19 +25,21 @@ export default function App() {
   const handleViewChange = (event) => {
     // When user clicks button, currentView changes to value of button
     event.preventDefault();
+    if (currentView === "Memories") {
+      setSelectedPrefecture("");
+    }
     setCurrentView(event.target.value);
   }
 
   return (
     <div className="App">
       <h1>{UIText.appName[currentLocale]}</h1>
-
       {
         currentView === "Memories" ? (
-          <Memories currentLocale={currentLocale}></Memories>
+          <Memories currentLocale={currentLocale} onClick={handleViewChange}></Memories>
         ) : (
           currentView === "PrefectureMemories" ? (
-            <PrefectureMemories currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></PrefectureMemories>
+            <PrefectureMemories currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleViewChange}></PrefectureMemories>
           ) : (
             currentView === "AddNewMemory" ? (
               <AddNewMemory currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></AddNewMemory>

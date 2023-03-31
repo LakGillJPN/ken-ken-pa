@@ -19,8 +19,8 @@ export default function AddNewMemory(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const form = event.target;
-        const formData = new FormData(form);
+        // const form = event.target;
+        // const formData = new FormData(form);
 
         // fetch('/api', {method: form.method, body: formData});
 
@@ -35,7 +35,7 @@ export default function AddNewMemory(props) {
                     {UIText["select-prefecture"][currentLocale]}
                     <select name="prefecture" id="select-prefecture" defaultValue={selectedPrefecture} required>
                         {
-                            Object.keys(UIText.prefectures).map((id) => {
+                            Object.keys(UIText.prefectures).sort((a, b) => Number(a) - Number(b)).map((id) => {
                                 return <option value={id} key={id}>{UIText.prefectures[id][currentLocale]}</option>;
                             })
                         }
