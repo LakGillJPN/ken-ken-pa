@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import UIText from "../data/locales.json"
 
 export default function AddNewMemory(props) {
@@ -11,12 +11,10 @@ export default function AddNewMemory(props) {
             <h1>{UIText["add-memory"][currentLocale]}</h1>
             <div>
                 <label for="select-prefecture">{UIText["select-prefecture"][currentLocale]}</label>
-                <select id="select-prefecture" required>
+                <select id="select-prefecture" defaultValue={selectedPrefecture} required>
                     {
                         Object.keys(UIText.prefectures).map((id) => {
-                            return id === selectedPrefecture
-                                ? <option value={id} selected>{UIText.prefectures[id][currentLocale]}</option>
-                                : <option value={id}>{UIText.prefectures[id][currentLocale]}</option>;
+                            return <option value={id} key={id}>{UIText.prefectures[id][currentLocale]}</option>;
                         })
                     }
                 </select>

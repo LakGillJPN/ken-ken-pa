@@ -22,15 +22,10 @@ export default function App() {
     setPopupMenu(true);
   }
 
-  const handleSeeMemoriesClicked = (event) => {
-    //if see memories button in the menu clicked, currentView becomes "Memories"
+  const changeViewOnButtonClick = (event) => {
+    // When user clicks button, currentView changes to value of button
     event.preventDefault();
-    setCurrentView("Memories");
-  }
-
-  const handleSeePrefectureMemoriesClicked = (event) => {
-    event.preventDefault();
-    setCurrentView("PrefectureMemories");
+    setCurrentView(event.target.value);
   }
 
   return (
@@ -53,7 +48,7 @@ export default function App() {
                 setSelectedPrefecture={setSelectedPrefecture}></Map>
 
                 {isShown === true ? (
-                  <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleSeePrefectureMemoriesClicked}></PopupMenu>
+                  <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={changeViewOnButtonClick} ></PopupMenu>
                 ) : (
                   <div></div>
                 )}
