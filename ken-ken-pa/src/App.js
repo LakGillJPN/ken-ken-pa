@@ -34,6 +34,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <Login />
       <h1>{UIText.appName[currentLocale]}</h1>
       {
         currentView === "Memories" ? (

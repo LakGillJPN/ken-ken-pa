@@ -4,9 +4,8 @@ const { loginWithEmailAndPassword } = require("../firebase/auth");
 
 router.post("/login", async(req, res) => {
   const { email, password } = req.body;
-  
   const user = await loginWithEmailAndPassword(email, password);
-  // console.log("🐳", email===user.user.email);
+  console.log("🐳", user===undefined);
   res.status(200).send(user.user);
 });
 
