@@ -7,18 +7,14 @@ export default function Memories(props) {
 
    return(
     <div className="memories-container">
-        <h1>{UIText["my-memories"][currentLocale][0]}</h1>
-        <h2>{UIText["my-memories"][currentLocale][1]}</h2>
+        <h1>{UIText["my-memories"][0][currentLocale]}</h1>
+        <h2>{UIText["my-memories"][1][currentLocale]}</h2>
         <p>Photo zone</p>
         
         <div className="side-menu">
             <input ref={inputRef} type="file" style={{display: "none"}}/>
             <button className="button" onClick={() => { inputRef.current.click(); }} >
-                {
-                    currentLocale === "en"
-                        ? UIText["add-memory-of"][currentLocale] + "prefecture name"
-                        : "prefecture name" + UIText["add-memory-of"][currentLocale]
-                }
+                { UIText["add-memory"][currentLocale] }
             </button>
         </div>
     </div>

@@ -1,13 +1,32 @@
-.side-menu {
-    float: right;
-}
-
+<<<<<<< HEAD
 .map-prefecture {
     fill: #d3d3d3;
     stroke: #959595;
     stroke-width: 1px;
 }
 
+.map-prefecture:focus {
+    fill: rgb(14, 67, 128);
+    stroke: rgb(0, 47, 101);
+    stroke-width: 1px;
+    outline: none;
+}
+=======
+.side-menu {
+    float: right;
+}.map-prefecture {
+    fill: #d3d3d3;
+    stroke: #959595;
+    stroke-width: 1px;
+}
+>>>>>>> 8f75d33 (feat: create App.js and three components: Map, Memories and PopupMenu)
+
+.map-prefecture:focus {
+    fill: rgb(14, 67, 128);
+    stroke: rgb(0, 47, 101);
+    stroke-width: 1px;
+    outline: none;
+}
 .map-prefecture:focus {
     fill: rgb(14, 67, 128);
     stroke: rgb(0, 47, 101);
