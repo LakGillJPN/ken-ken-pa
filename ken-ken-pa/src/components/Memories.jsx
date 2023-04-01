@@ -1,5 +1,6 @@
 import { React } from "react";
 import UIText from "../data/locales.json";
+import "./Memories.css";
 
 export default function Memories(props) {
     const { onClick, currentLocale } = props;
