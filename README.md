@@ -2,7 +2,7 @@
 
 # Introduction
 
-Ken-Ken-Pa is an interactive map of Japan that allows you to keep a virtual diary of your journey in Japan. 
+Ken-Ken-Pa is an interactive map of Japan that allows you to keep a virtual diary of your journey in the country. After logging in, a user can select a prefecture and either add a photo (with an optional caption) or view all the photos that users have uploaded for that prefecture (PrefectureMemories). 
 
 ![mapofjapan](https://user-images.githubusercontent.com/6261485/229280879-2bc15c6a-c7ee-4d4c-b4c5-c53ff43a1aec.png)
 
