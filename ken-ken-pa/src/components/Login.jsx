@@ -55,9 +55,8 @@ export default function Login(props) {
           </div>
           <p id="sign-up">{UIText["signup-prompt"][currentLocale]}</p>
 
-          {isloginUnsuccess
-            ? <p id="err">Sorry Incorrect password or email address</p>
-            : <></>
+          { isloginUnsuccess
+            && (<p id="err">{UIText["login-fail"][currentLocale]}</p>)
           }
          <SubmitBtn type="login" currentLocale={currentLocale}/>
     </form>
