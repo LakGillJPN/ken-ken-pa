@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 import AddNewMemory from "./components/AddNewMemory";
+import Login from "./components/Login";
 import Map from "./components/Map";
 import Memories from "./components/Memories";
 import PopupMenu from "./components/PopupMenu";
@@ -14,6 +15,7 @@ export default function App() {
   const [currentView, setCurrentView] = useState("");
   const [currentLocale, setCurrentLocale] = useState("en");
   const [selectedPrefecture, setSelectedPrefecture] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const handlePopupMenu = (event) => {
     event.preventDefault();
@@ -45,8 +47,13 @@ export default function App() {
     setPopupMenu(false);
   }
 
+  const gradientStyle = {
+   background: 'linear-gradient(to bottom, #8AB4F8, lightblue)',
+  }
+  
+
   return (
-    <div className="App">
+    <div className="App" style={gradientStyle}>
       <div className="main-area">
       <h1>{UIText.appName[currentLocale]}</h1>
       {
@@ -59,18 +66,21 @@ export default function App() {
             currentView === "AddNewMemory" ? (
               <AddNewMemory currentLocale={currentLocale} selectedPrefecture={selectedPrefecture}></AddNewMemory>
             ) : (
-              <div>
-                <Map 
-                handlePopupMenu={handlePopupMenu}
-                setSelectedPrefecture={setSelectedPrefecture}></Map>
+              currentView === "Login" ? (
+                <Login currentLocale={currentLocale}/>
+              ) : (
+                <div>
+                  <Map 
+                  handlePopupMenu={handlePopupMenu}
+                  setSelectedPrefecture={setSelectedPrefecture}></Map>
 
-                {isShown === true ? (
-                  <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleViewChange} ></PopupMenu>
-                ) : (
-                  <div></div>
-                )}
-              </div>
-        )))
+                  {isShown === true ? (
+                    <PopupMenu currentLocale={currentLocale} selectedPrefecture={selectedPrefecture} onClick={handleViewChange} ></PopupMenu>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
+        ))))
       }
       </div>
 
@@ -82,6 +92,7 @@ export default function App() {
           goToHome={goToHome}
           currentView={currentView}
           handleViewChange={handleViewChange}
+          loggedIn={loggedIn}
           >
           </Navbar>
       </div>

@@ -3,16 +3,27 @@ import UIText from "../data/locales.json";
 import "./Navbar.css"
 
 export default function Navbar(props) {
-    const { currentLocale, changeLangToJa, changeLangToEn, goToHome, currentView, handleViewChange } = props;
+    const { currentLocale, changeLangToJa, changeLangToEn, goToHome, currentView, handleViewChange, loggedIn } = props;
 
     return (
     <div className="navbar">
-        <button className="logout-button">Logout</button>
+        { 
+            currentView !== "Login"
+                && ( loggedIn
+                        ? (
+                            <>
+                                <button className="button" value="AddNewMemory" onClick={handleViewChange} >
+                                    { UIText["add-memory"][currentLocale] }
+                                </button>
+                                <button className="logout-button">{UIText.logout[currentLocale]}</button>
+                            </>
+                        ) : <button className="login-button" value="Login" onClick={handleViewChange}>{UIText.login[currentLocale]}</button>
+        )}
 
         { currentView === "Memories" || currentView === "PrefectureMemories" || currentView === "AddNewMemory" ? (
             <button 
             className="home-button"
-            onClick={goToHome}>Home
+            onClick={goToHome}>{UIText.home[currentLocale]}
             </button>
         ) : ("")}
 
