@@ -193,9 +193,13 @@
             "ja": "沖縄県"
         }
     },
-    "username": {
-        "en": "Username",
-        "ja": "ユーザーネーム"
+    "home": {
+        "en": "Home",
+        "ja": "トップ"
+    },
+    "email": {
+        "en": "Email Address",
+        "ja": "メールアドレス"
     },
     "password": {
         "en": "Password",
@@ -204,6 +208,10 @@
     "login": {
         "en": "Log In",
         "ja": "ログイン"
+    },
+    "logout": {
+        "en": "Log Out",
+        "ja": "ログアウト"
     },
     "login-submit": {
         "en": "Log In",

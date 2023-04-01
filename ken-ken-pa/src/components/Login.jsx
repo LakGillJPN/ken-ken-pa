@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import SubmitBtn from "./SubmitBtn";
+import UIText from "../data/locales.json";
 import axios from "axios";
 import "./Login.css";
 
-export default function Login() {
+export default function Login(props) {
+  const {currentLocale} = props;
   // login Success or error
   const [isloginUnsuccess, setLoginUnsuccess] = useState();
   
@@ -35,29 +37,29 @@ export default function Login() {
   return (
     <div className='login-from'>
       <div className='login-form-top'>
-           <h1>Login</h1>
+           <h1>{UIText.login[currentLocale]}</h1>
       </div>
     <div className='login-from-inputs'>
      <form onSubmit={handleSubmit}>
-          <p>Email</p>
+          <p>{UIText.email[currentLocale]}</p>
           <div className="inputs">
             <label>
              <input type="email" name="email" defaultValue="" placeholder="email" required/>
           </label>
           </div>  
           <div className="inputs">
-            <p>Password</p>
+            <p>{UIText.password[currentLocale]}</p>
             <label>
               <input type="password" name="lastName" defaultValue="" placeholder="password" required/>
             </label>
           </div>
-          <p id="sign-up">Not a member? Sign up here!</p>
+          <p id="sign-up">{UIText["signup-prompt"][currentLocale]}</p>
 
           {isloginUnsuccess
             ? <p id="err">Sorry Incorrect password or email address</p>
             : <></>
           }
-         <SubmitBtn/>
+         <SubmitBtn type="login" currentLocale={currentLocale}/>
     </form>
     </div>
    </div>

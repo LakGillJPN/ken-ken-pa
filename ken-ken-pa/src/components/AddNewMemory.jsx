@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import UIText from "../data/locales.json"
+import SubmitBtn from "./SubmitBtn";
 
 export default function AddNewMemory(props) {
     const { currentLocale, selectedPrefecture } = props;
@@ -72,7 +73,7 @@ export default function AddNewMemory(props) {
                 </label>
             </div>
             <div>
-                <button type="submit">{UIText["submit-memory"][currentLocale]}</button>
+                <SubmitBtn type="memory" currentLocale={currentLocale}/>
             </div>
         </form>
     );
