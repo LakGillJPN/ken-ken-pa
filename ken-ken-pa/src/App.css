@@ -5,8 +5,17 @@
 }
 
 .map-prefecture:focus {
-    fill: rgb(14, 67, 128);
-    stroke: rgb(0, 47, 101);
+    fill: #9ED6AD;
+    stroke: green;
     stroke-width: 1px;
     outline: none;
 }
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+
+
+

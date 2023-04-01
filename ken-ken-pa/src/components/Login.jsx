@@ -34,7 +34,9 @@ export default function Login(props) {
     return isEnableToLogin.data;
   };
 
+
   return (
+    <div className='container'>
     <div className='login-from'>
       <div className='login-form-top'>
            <h1>{UIText.login[currentLocale]}</h1>
@@ -61,6 +63,7 @@ export default function Login(props) {
          <SubmitBtn type="login" currentLocale={currentLocale}/>
     </form>
     </div>
+   </div>
    </div>
   );
 }
