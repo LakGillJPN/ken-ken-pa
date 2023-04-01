@@ -4,6 +4,16 @@
 
 Ken-Ken-Pa is an interactive map of Japan that allows you to keep a virtual diary of your journey in Japan. 
 
+![mapofjapan](https://user-images.githubusercontent.com/6261485/229280879-2bc15c6a-c7ee-4d4c-b4c5-c53ff43a1aec.png)
+
+# Design
+
+- [Figma](https://www.figma.com/file/uEQxLqI7VDrZkAqAyoZcnA/Greenfield?node-id=0%3A1&t=ISgGuJCL8iZwKYNq-1)
+- db schema:
+
+![dbschema](https://user-images.githubusercontent.com/6261485/229280886-50854d71-21a4-4076-9b96-7d9101549f0b.png)
+
+
 # Features
 
 ## Implemented
