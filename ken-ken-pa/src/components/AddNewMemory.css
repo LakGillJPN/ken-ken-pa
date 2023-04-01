@@ -2,12 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 .memory-content-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+}
+
+.memory-content-container > div {
+    margin: 20pt;
 }
 
 .memory-content-container label {
