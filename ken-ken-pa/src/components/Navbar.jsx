@@ -26,9 +26,16 @@ export default function Navbar(props) {
             </button>
         ) : ("")}
 
-        <div className="language-button">
-            <button onClick={changeLangToJa}>日本語</button>
-            <button onClick={changeLangToEn}>English</button>
+        <div className="language-button-container">
+            <button
+            className="language-button"
+            onClick={changeLangToJa}
+            >日本語</button>
+
+            <button 
+            className="language-button"
+            onClick={changeLangToEn}
+            >English</button>
         </div>
     </div>
    )

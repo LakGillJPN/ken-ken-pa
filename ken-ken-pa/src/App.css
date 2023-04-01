@@ -16,18 +16,23 @@
 }
 
 .navbar-container {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
     float: right;
-    width: 15%;
     background-color: rgb(227, 227, 227);
     align-items: stretch;
     position: sticky;
     top: 0;
-    height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .main-area {
     float: left;
-    width: 85%;
+    flex-grow: 9;
+    background-color: blue;
 }
 
 body {
