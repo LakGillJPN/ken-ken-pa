@@ -47,6 +47,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <div className="main-area">
       <h1>{UIText.appName[currentLocale]}</h1>
       {
         currentView === "Memories" ? (
@@ -71,7 +72,9 @@ export default function App() {
               </div>
         )))
       }
+      </div>
 
+      <div className="navbar-container">
           <Navbar
           currentLocale={currentLocale}
           changeLangToJa={changeLangToJa}
@@ -81,6 +84,7 @@ export default function App() {
           handleViewChange={handleViewChange}
           >
           </Navbar>
+      </div>
     </div>
   );
 }
