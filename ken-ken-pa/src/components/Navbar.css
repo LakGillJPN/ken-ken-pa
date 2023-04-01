@@ -1,0 +1,31 @@
+.navbar {
+    flex-direction: column;
+    text-align: center;
+}
+
+.logout-button {
+    font-size: 16px;
+    padding: 5px 30px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    border-radius: 100vh;
+}
+
+.home-button {
+    font-size: 16px;
+    padding: 5px 30px;
+    margin-bottom: auto;
+    border-radius: 100vh;
+}
+
+.my-memories-button {
+    text-decoration: underline;
+    font-size: 16px;
+    padding: 15px 30px;
+    margin-top: 30px;
+    margin-bottom: auto;
+}
+
+.language-button {
+    padding: 15px 30px;
+}

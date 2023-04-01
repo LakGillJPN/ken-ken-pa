@@ -10,3 +10,27 @@
     stroke-width: 1px;
     outline: none;
 }
+
+.App {
+    display: flex;
+}
+
+.navbar-container {
+    float: right;
+    width: 15%;
+    background-color: rgb(227, 227, 227);
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.main-area {
+    float: left;
+    width: 85%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
