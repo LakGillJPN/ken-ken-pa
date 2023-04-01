@@ -6,7 +6,12 @@ export default function PrefectureMemories(props) {
 
    return(
     <div className="memories-container">
-        <h1>{UIText["memories-of"][0][currentLocale] + UIText.prefectures[selectedPrefecture][currentLocale]}</h1>
+        <h1>{
+            currentLocale === "en"
+            ? UIText["memories-of"][0][currentLocale]+ UIText.prefectures[selectedPrefecture][currentLocale]
+            : UIText.prefectures[selectedPrefecture][currentLocale] + UIText["memories-of"][0][currentLocale]
+        }</h1>
+        
         <h2>{UIText["memories-of"][1][currentLocale]}</h2>
         <p>Photo zone</p>
         
