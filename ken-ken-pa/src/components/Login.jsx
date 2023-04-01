@@ -38,7 +38,9 @@ export default function Login(props) {
     }
   };
 
+
   return (
+    <div className='container'>
     <div className='login-from'>
       <div className='login-form-top'>
            <h1>{UIText.login[currentLocale]}</h1>
@@ -59,13 +61,13 @@ export default function Login(props) {
           </div>
           <p id="sign-up">{UIText["signup-prompt"][currentLocale]}</p>
 
-          {isloginUnsuccess
-            ? <p id="err">Sorry Incorrect password or email address</p>
-            : <></>
+          { isloginUnsuccess
+            && (<p id="err">{UIText["login-fail"][currentLocale]}</p>)
           }
          <SubmitBtn type="login" currentLocale={currentLocale}/>
     </form>
     </div>
+   </div>
    </div>
   );
 }

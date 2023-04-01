@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.App {
+    height: 100%;
+    min-height: 100vh;
+}
+
 .map-prefecture {
     fill: #d3d3d3;
     stroke: #959595;
@@ -5,9 +16,8 @@
 }
 
 .map-prefecture:focus {
-    fill: rgb(14, 67, 128);
-    stroke: rgb(0, 47, 101);
+    fill: #9ED6AD;
+    stroke: green;
     stroke-width: 1px;
     outline: none;
 }
-
