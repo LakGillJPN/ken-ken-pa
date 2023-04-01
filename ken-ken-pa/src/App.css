@@ -1,19 +1,9 @@
-.side-menu {
-    float: right;
-}
-
 .map-prefecture {
     fill: #d3d3d3;
     stroke: #959595;
     stroke-width: 1px;
 }
 
-.map-prefecture:focus {
-    fill: rgb(14, 67, 128);
-    stroke: rgb(0, 47, 101);
-    stroke-width: 1px;
-    outline: none;
-}
 .map-prefecture:focus {
     fill: rgb(14, 67, 128);
     stroke: rgb(0, 47, 101);
