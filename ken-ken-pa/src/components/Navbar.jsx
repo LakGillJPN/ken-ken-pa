@@ -20,7 +20,11 @@ export default function Navbar(props) {
                         ) : <button className="login-button" value="Login" onClick={handleViewChange}>{UIText.login[currentLocale]}</button>
         )}
 
-        { currentView === "Memories" || currentView === "PrefectureMemories" || currentView === "AddNewMemory" ? (
+        { currentView === "Memories" || 
+          currentView === "PrefectureMemories" || 
+          currentView === "AddNewMemory" ||
+          !loggedIn
+          ? (
             <button 
             className="home-button"
             onClick={goToHome}>{UIText.home[currentLocale]}
