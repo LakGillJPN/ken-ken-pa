@@ -31,7 +31,7 @@ export default function Login(props) {
 
   const tryLogin = async (userLoginInfo) => {
     try { 
-      const isEnableToLogin = await axios.post("/login", userLoginInfo);
+      const isEnableToLogin = await axios.post("/users/login", userLoginInfo);
       return isEnableToLogin.data;
     } catch (error) {
       console.error(error);
