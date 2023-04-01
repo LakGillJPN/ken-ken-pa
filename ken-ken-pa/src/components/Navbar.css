@@ -50,12 +50,12 @@
 
 .language-button-container {
     display: inline;
-    margin-bottom: 0;
+    align-items: center;
 }
 
 .language-button {
     font-size: 100%;
-    padding: auto;
+    padding: 5px 10px;
     margin-top: 30px;
     height: 35px;
     cursor: pointer;
@@ -67,4 +67,4 @@
 .my-memories-button:active {
     box-shadow: none;
     transform: translateY(3px);
-  }
+}
