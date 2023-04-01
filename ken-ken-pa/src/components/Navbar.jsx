@@ -23,7 +23,7 @@ export default function Navbar(props) {
         { currentView === "Memories" || 
           currentView === "PrefectureMemories" || 
           currentView === "AddNewMemory" ||
-          !loggedIn
+          (!loggedIn && currentView !== "")
           ? (
             <button 
             className="home-button"
