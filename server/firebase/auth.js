@@ -1,10 +1,8 @@
 const firebase = require("firebase/app");
-const { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } = require("firebase/auth");
-const { firebaseConfig } = require("../../firebase_conf");
+const { getAuth, signInWithEmailAndPassword } = require("firebase/auth");
+const firebaseConfig = require("./firebase_conf.js");
 
 const enviroment = process.env.NODE_ENV === "production" ? "production" : "development";
-
-console.log("env",enviroment);
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig[enviroment].config);
