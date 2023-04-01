@@ -8,8 +8,7 @@ export default function Navbar(props) {
     <div className="navbar">
         { 
             currentView !== "Login"
-                ? (
-                    loggedIn
+                && ( loggedIn
                         ? (
                             <>
                                 <button className="button" value="AddNewMemory" onClick={handleViewChange} >
@@ -18,8 +17,7 @@ export default function Navbar(props) {
                                 <button className="logout-button">{UIText.logout[currentLocale]}</button>
                             </>
                         ) : <button className="login-button" value="Login" onClick={handleViewChange}>{UIText.login[currentLocale]}</button>
-                ) : <></>
-        }
+        )}
 
         { currentView === "Memories" || currentView === "PrefectureMemories" || currentView === "AddNewMemory" ? (
             <h1 
