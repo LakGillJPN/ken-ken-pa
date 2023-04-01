@@ -217,6 +217,10 @@
         "en": "Log In",
         "ja": "ログインする"
     },
+    "login-fail": {
+        "en": "Sorry Incorrect password or email address",
+        "ja": "パスワードまたはメールアドレスが正しくありません。"
+    },
     "signup-prompt": {
         "en": "Not a member? Sign up here!",
         "ja": "アカウントをお持ちでない方はこちらから新規会員登録をお願いします。"
@@ -258,11 +262,11 @@
         "ja": "の思い出を追加する"
     },
     "see-memories": {
-        "en": "See Memories",
+        "en": "See My Memories",
         "ja": "あなたの思い出を見る"
     },
     "see-memories-of": {
-        "en": "See Memories of ",
+        "en": "See Everyone's Memories of ",
         "ja": "の全ての思い出を見る"
     },
     "remove-visit": {
