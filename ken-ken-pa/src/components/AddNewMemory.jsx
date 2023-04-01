@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import UIText from "../data/locales.json"
 import SubmitBtn from "./SubmitBtn";
+import "./AddNewMemory.css";
 
 export default function AddNewMemory(props) {
     const { currentLocale, selectedPrefecture } = props;
@@ -29,7 +30,7 @@ export default function AddNewMemory(props) {
     }
     
     return (
-        <form method="post" onSubmit={handleSubmit}>
+        <form className="memory-form" method="post" onSubmit={handleSubmit}>
             <h1>{UIText["add-memory"][currentLocale]}</h1>
             <div>
                 <label>
@@ -43,34 +44,36 @@ export default function AddNewMemory(props) {
                     </select>
                 </label>
             </div>
-            <div>
-            <label>
-                {UIText["select-photo"][currentLocale]}
-                <input name="photo" id="photo-fileselect" ref={inputRef} type="file" style={{display: "none"}} onChange={updateImageDisplay} required/>
-            </label>
-            { photoIsSelected
-                ? (
-                    <>
-                        <img src={currentImage} alt="User selection."/>
-                        <button type="button" onClick={updateImageDisplay}>
-                            × {UIText["remove-photo"][currentLocale]}
-                        </button>
-                    </>
-                )
-                : (
-                    <>
-                        <button type="button" onClick={() => { inputRef.current.click() }} >
-                            {UIText["choose-photo"][currentLocale]}
-                        </button>
-                    </>
-                )
-            }
-            </div>
-            <div>
-                <label>
-                    {UIText["explain-memory"][currentLocale]}
+            <div className="memory-content-container">
+                <div className="photo-selector">
+                    <label>
+                        {UIText["select-photo"][currentLocale]}
+                        <input name="photo" id="photo-fileselect" ref={inputRef} type="file" style={{display: "none"}} onChange={updateImageDisplay} required/>
+                    </label>
+                    { photoIsSelected
+                        ? (
+                            <>
+                                <img src={currentImage} alt="User selection."/>
+                                <button type="button" onClick={updateImageDisplay}>
+                                    × {UIText["remove-photo"][currentLocale]}
+                                </button>
+                            </>
+                        )
+                        : (
+                            <>
+                                <button type="button" onClick={() => { inputRef.current.click() }} >
+                                    {UIText["choose-photo"][currentLocale]}
+                                </button>
+                            </>
+                        )
+                    }
+                </div>
+                <div className="text-editor">
+                    <label htmlFor="memory-textarea">
+                        {UIText["explain-memory"][currentLocale]}
+                    </label>
                     <textarea name="memoryText" id="memory-textarea" type="text" rows="5"/>
-                </label>
+                </div>
             </div>
             <div>
                 <SubmitBtn type="memory" currentLocale={currentLocale}/>
