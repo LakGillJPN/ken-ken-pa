@@ -32,7 +32,6 @@
 .main-area {
     float: left;
     flex-grow: 9;
-    background-color: blue;
 }
 
 body {

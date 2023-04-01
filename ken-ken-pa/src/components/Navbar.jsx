@@ -30,9 +30,10 @@ export default function Navbar(props) {
             <button
             className="language-button"
             onClick={changeLangToJa}
-            >日本語</button>
-
-            <button 
+            >日本語
+            </button>
+            
+            <button
             className="language-button"
             onClick={changeLangToEn}
             >English</button>

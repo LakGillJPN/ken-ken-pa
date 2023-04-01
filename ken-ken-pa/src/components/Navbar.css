@@ -52,8 +52,9 @@
     height: 35px;
 }
 
-.logout-button:hover:hover,
+.logout-button:hover,
 .home-button:hover,
-.my-memories-button:hover:hover {
+.my-memories-button:hover,
+.language-button:hover {
     background-color: lightgoldenrodyellow;
 }
