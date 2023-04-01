@@ -1,18 +1,13 @@
 const firebase = require("firebase/app");
-const {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} = require("firebase/auth");
+const { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } = require("firebase/auth");
+const { firebaseConfig } = require("../../firebase_conf");
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAUhr2UaUt6CwNUwIW8boTW9mV7DWQ3xTk",
-  authDomain: "ccp7-greenfiled.firebaseapp.com",
-  projectId: "ccp7-greenfiled",
-  storageBucket: "ccp7-greenfiled.appspot.com",
-  messagingSenderId: "103434290490",
-  appId: "1:103434290490:web:76052eefd21135ad52bc03",
-  measurementId: "G-11GFF02X0T"
-};
+const enviroment = process.env.NODE_ENV === "production" ? "production" : "development";
+
+console.log("env",enviroment);
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig[enviroment].config);
 
 const auth = getAuth();
 
