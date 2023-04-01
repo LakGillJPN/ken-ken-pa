@@ -2,16 +2,23 @@ import { React } from "react";
 import UIText from "../data/locales.json";
 
 export default function Navbar(props) {
-    const { currentLocale, changeLangToJa, changeLangToEn, goToHome, currentView, handleViewChange } = props;
+    const { currentLocale, changeLangToJa, changeLangToEn, goToHome, currentView, handleViewChange, loggedIn } = props;
 
     return (
     <div className="navbar">
-        <h2 className="logout-button">Logout</h2>
+        { 
+            currentView !== "Login"
+                ? (
+                    loggedIn
+                        ? <button className="logout-button">{UIText.logout[currentLocale]}</button>
+                        : <button className="login-button" value="Login" onClick={handleViewChange}>{UIText.login[currentLocale]}</button>
+                ) : <></>
+        }
 
         { currentView === "Memories" || currentView === "PrefectureMemories" || currentView === "AddNewMemory" ? (
             <h1 
             className="home-button"
-            onClick={goToHome}>Home
+            onClick={goToHome}>{UIText.home[currentLocale]}
             </h1>
         ) : ("")}
 

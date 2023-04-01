@@ -1,8 +1,10 @@
 import React from "react";
 import SubmitBtn from "./SubmitBtn";
+import UIText from "../data/locales.json";
 import "./Login.css";
 
-export default function Login() {
+export default function Login(props) {
+  const {currentLocale} = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,24 +15,24 @@ export default function Login() {
   return (
     <div className='login-from'>
       <div className='login-form-top'>
-           <h1>Login</h1>
+           <h1>{UIText.login[currentLocale]}</h1>
       </div>
     <div className='login-from-inputs'>
      <form onSubmit={handleSubmit}>
-          <p>Email</p>
+          <p>{UIText.email[currentLocale]}</p>
           <div className="inputs">
             <label>
              <input type="email" name="email" defaultValue="" placeholder="email"/>
           </label>
           </div>  
           <div className="inputs">
-            <p>Password</p>
+            <p>{UIText.password[currentLocale]}</p>
             <label>
               <input type="password" name="lastName" defaultValue="" placeholder="password"/>
             </label>
           </div>
-          <p id="sign-up">Not a member? Sign up here!</p>
-         <SubmitBtn/>
+          <p id="sign-up">{UIText["signup-prompt"][currentLocale]}</p>
+         <SubmitBtn type="login" currentLocale={currentLocale}/>
     </form>
     </div>
    </div>
