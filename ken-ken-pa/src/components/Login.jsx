@@ -19,9 +19,9 @@ export default function Login(props) {
 
      // (async) to send email and password to express endpoint /login
     const loginResult  = await tryLogin(userLoginInfo);
-
+    
     // when user login is unsuccessful
-    if (loginResult === false) {
+    if (loginResult === false || loginResult === undefined) {
       setLoginUnsuccess(true);
     // user login is successful
     } else if (loginResult === true) { 
@@ -30,8 +30,12 @@ export default function Login(props) {
   };
 
   const tryLogin = async (userLoginInfo) => {
-    const isEnableToLogin = await axios.post("/login", userLoginInfo);
-    return isEnableToLogin.data;
+    try { 
+      const isEnableToLogin = await axios.post("/login", userLoginInfo);
+      return isEnableToLogin.data;
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

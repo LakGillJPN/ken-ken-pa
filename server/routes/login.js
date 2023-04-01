@@ -8,7 +8,7 @@ router.post("/login", async(req, res) => {
   
   if (user === undefined) {
     // login unsuccess
-    res.status(200).send(false);
+    res.status(400).send(false);
   } else { 
     // login success
     res.status(200).send(true);
