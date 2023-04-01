@@ -47,8 +47,13 @@ export default function App() {
     setPopupMenu(false);
   }
 
+  const gradientStyle = {
+   background: 'linear-gradient(to bottom, lightblue, white)'
+  }
+  
+
   return (
-    <div className="App">
+    <div className="App" style={gradientStyle}>
       <h1>{UIText.appName[currentLocale]}</h1>
       {
         currentView === "Memories" ? (

@@ -10,3 +10,9 @@
     stroke-width: 1px;
     outline: none;
 }
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
