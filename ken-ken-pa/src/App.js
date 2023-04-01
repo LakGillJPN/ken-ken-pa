@@ -48,7 +48,7 @@ export default function App() {
   }
 
   const gradientStyle = {
-   background: 'linear-gradient(to bottom, lightblue, white)'
+   background: 'linear-gradient(to bottom, #8AB4F8, lightblue)',
   }
   
 
