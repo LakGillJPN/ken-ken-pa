@@ -1,5 +1,6 @@
 import { React } from "react";
 import UIText from "../data/locales.json";
+import "./Navbar.css"
 
 export default function Navbar(props) {
     const { currentLocale, changeLangToJa, changeLangToEn, goToHome, currentView, handleViewChange, loggedIn } = props;
@@ -19,11 +20,15 @@ export default function Navbar(props) {
                         ) : <button className="login-button" value="Login" onClick={handleViewChange}>{UIText.login[currentLocale]}</button>
         )}
 
-        { currentView === "Memories" || currentView === "PrefectureMemories" || currentView === "AddNewMemory" ? (
-            <h1 
+        { currentView === "Memories" || 
+          currentView === "PrefectureMemories" || 
+          currentView === "AddNewMemory" ||
+          (!loggedIn && currentView !== "")
+          ? (
+            <button 
             className="home-button"
             onClick={goToHome}>{UIText.home[currentLocale]}
-            </h1>
+            </button>
         ) : ("")}
 
         { currentView === "" || currentView === "PrefectureMemories" ? (
@@ -36,9 +41,17 @@ export default function Navbar(props) {
             </button>
         ) : ("")}
 
-        <div className="language-button">
-            <button onClick={changeLangToJa}>日本語</button>
-            <button onClick={changeLangToEn}>English</button>
+        <div className="language-button-container">
+            <button
+            className="language-button"
+            onClick={changeLangToJa}
+            >日本語
+            </button>
+            
+            <button
+            className="language-button"
+            onClick={changeLangToEn}
+            >English</button>
         </div>
     </div>
    )
