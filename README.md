@@ -37,10 +37,10 @@ Ken-Ken-Pa is an interactive map of Japan that allows you to keep a virtual diar
   - [ ] Highlight all visited prefectures for currently logged-in user
   
 - Other UI:
-  - [ ] Create UI components for displaying photos in `Memories` and `PrefectureMemories` - [#46](https://github.com/LakGillJPN/ccp7-greenfield/issues/46)
-  - [ ] Finish CSS styling - [#26](https://github.com/LakGillJPN/ccp7-greenfield/issues/26), [#28](https://github.com/LakGillJPN/ccp7-greenfield/issues/28), [#37](https://github.com/LakGillJPN/ccp7-greenfield/issues/37)
-  - [ ] Dynamically display buttons in `NavBar` based on current view - [#40](https://github.com/LakGillJPN/ccp7-greenfield/issues/40), [#48](https://github.com/LakGillJPN/ccp7-greenfield/issues/48)
   - [ ] Create UI for user signup
+  - [ ] Create UI components for displaying photos in `Memories` and `PrefectureMemories` - [#46](https://github.com/LakGillJPN/ccp7-greenfield/issues/46)
+  - [ ] Finish CSS styling - [#28](https://github.com/LakGillJPN/ccp7-greenfield/issues/28), [#37](https://github.com/LakGillJPN/ccp7-greenfield/issues/37)
+  - [ ] Dynamically display buttons in `NavBar` based on current view - [#40](https://github.com/LakGillJPN/ccp7-greenfield/issues/40)
 
 - Backend:
   - [ ] Run Express server on deployment - [#47](https://github.com/LakGillJPN/ccp7-greenfield/issues/47)
@@ -48,8 +48,6 @@ Ken-Ken-Pa is an interactive map of Japan that allows you to keep a virtual diar
   - [ ] Implement API endpoints for storing/accessing user `uid`s from Firebase - [#35](https://github.com/LakGillJPN/ccp7-greenfield/issues/35)
   - [ ] Implement API endpoints for storing/accessing photos (memories)
   - [ ] Implement API endpoints for storing/accessing user-prefecture relations
-
-- [ ] ...?
 
 
 # Attributions
