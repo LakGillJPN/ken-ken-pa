@@ -5,9 +5,9 @@ const USERS_TABLE = "users";
 // export 
 module.exports = {
   USERS_TABLE,
-  getUserUid(uid) { 
+  getUserData(uid) { 
     return knex
-      .select("UID")
+      .select("*")
       .from(USERS_TABLE)
       .where({ "UID": uid })
   }
