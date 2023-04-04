@@ -47,7 +47,6 @@ Ken-Ken-Pa is an interactive map of Japan that allows you to keep a virtual diar
 - Backend:
   - [ ] Run Express server on deployment - [#47](https://github.com/LakGillJPN/ccp7-greenfield/issues/47)
   - [ ] Setup production database
-  - [ ] Implement API endpoints for storing/accessing user `uid`s from Firebase - [#35](https://github.com/LakGillJPN/ccp7-greenfield/issues/35)
   - [ ] Implement API endpoints for storing/accessing photos (memories)
   - [ ] Implement API endpoints for storing/accessing user-prefecture relations
 
