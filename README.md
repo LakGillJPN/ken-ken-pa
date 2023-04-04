@@ -1,5 +1,7 @@
 # Ken-Ken-Pa (ccp7-greenfield)
 
+### [Try Ken-Ken-Pa](https://ken-ken-pa.onrender.com/)
+
 # Introduction
 
 Ken-Ken-Pa is an interactive map of Japan that allows you to keep a virtual diary of your journey in the country. After logging in, a user can click on prefectures they've visited and either add Memories (photos with an optional caption) or view all the Memories that other users have uploaded for that prefecture.  Users can also view all their personal memories from all the prefectures they've visited.
