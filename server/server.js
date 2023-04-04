@@ -3,7 +3,7 @@ const path = require('path');
 const PORT = process.env.PORT || 4000;
 
 // routes
-const loginRoutes = require("./routes/login");
+const loginRoutes = require("./routes/user_auth");
 
 function setupServer() {
   const app = express();
@@ -11,7 +11,7 @@ function setupServer() {
   app.use(express.static(path.resolve(__dirname, '../ken-ken-pa/build')));
   app.use(express.json());
 
-  // endopint /login
+  // endopint /users/login
   app.use(loginRoutes);
 
   app.get('/hello', (req, res) => {
@@ -21,7 +21,7 @@ function setupServer() {
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
   });
-
+   
   return app;
 };
 
