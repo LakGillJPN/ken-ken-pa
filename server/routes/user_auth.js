@@ -8,14 +8,15 @@ const jwtConfig = require("../jwt_conf");
 router.post("/users/login", async(req, res) => {
   const { email, password } = req.body;
   const user = await loginWithEmailAndPassword(email, password);
-  // uuid from firebase
-  const uuid = user.user.reloadUserInfo.localId;
- 
+
   if (user === undefined) {
     // login unsuccess status 401 Unauthorized
     res.status(401).send(false);
   } else {
     // login success
+    // uuid from firebase
+    const uuid = user.user.reloadUserInfo.localId;
+    // from postgresql
     const userData = await usersModel.getUserData(uuid);
     // to make a token to a client
     const payload = { 
@@ -25,7 +26,10 @@ router.post("/users/login", async(req, res) => {
     
     console.log("this is token bro", token);
 
-    res.status(200).send(true);
+    const body = {
+      token: token
+    }
+    res.status(200).send(body);
   }
 });
 

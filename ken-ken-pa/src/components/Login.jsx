@@ -19,12 +19,12 @@ export default function Login(props) {
 
      // (async) to send email and password to express endpoint /login
     const loginResult  = await tryLogin(userLoginInfo);
-    
     // when user login is unsuccessful
     if (loginResult === false || loginResult === undefined) {
       setLoginUnsuccess(true);
     // user login is successful
-    } else if (loginResult === true) { 
+    } else { 
+      document.cookie = `jwt_token=${loginResult.token}; max-age=3600;`;
       setLoginUnsuccess(false);
     }
   };
